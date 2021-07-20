@@ -1,0 +1,126 @@
+
+h1 {
+  font-size: 1px;
+}
+.map__inner {
+  padding: 40px 0 150px;
+}
+.map__title {
+  max-width: 590px;
+  text-align: center;
+  margin: 0 auto 70px;
+  color: #20113d;
+}
+.map__img {
+  max-width: 1406px;
+  height: 912px;
+}
+.map {
+  width: 100%;
+  height: 100%;
+}
+.marker {
+  cursor: pointer;
+  transition: all 0.3s;
+  filter: drop-shadow(0px 4px 30px rgba(245, 128, 33, 0.7));
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+.marker--disabled {
+  pointer-events: none;
+}
+.marker-stroke {
+  stroke: none;
+}
+.marker:hover .marker-solid {
+  fill: #ffffff;
+  transition: fill 0.3s;
+}
+.marker:hover .marker-stroke {
+  stroke: #ffffff;
+  transition: stroke 0.3s;
+}
+.marker-title {
+  display: inline;
+  position: relative;
+}
+.marker-title:hover:after {
+  background: #333;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  bottom: 26px;
+  color: #fff;
+  content: attr(title);
+  left: 20%;
+  padding: 5px 15px;
+  position: absolute;
+  z-index: 98;
+  width: 220px;
+}
+.marker-title:hover:before {
+  border: solid;
+  border-color: #333 transparent;
+  border-width: 6px 6px 0 6px;
+  bottom: 20px;
+  content: "";
+  left: 50%;
+  position: absolute;
+  z-index: 99;
+}
+@media (max-width: 1200px) {
+  .container-max {
+    max-width: 1200px;
+    padding: 0;
+  }
+  .map__inner {
+    padding: 28px 0 104px;
+  }
+  .map__title {
+    margin-bottom: 12px;
+  }
+  .map__img {
+    max-width: 1198px;
+    height: 777px;
+  }
+  .full-map-image {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (max-width: 640px) {
+  .map__title {
+    font-size: 42px;
+    line-height: 51px;
+    margin-bottom: 63px;
+  }
+  .map__img {
+    height: 415px;
+  }
+}
+@media (max-width: 320px) {
+  .container {
+    padding: 0 10px;
+  }
+  .container-xsmall {
+    padding: 0 20px;
+  }
+  .map__inner {
+    padding: 16px 0 0;
+    height: 390px;
+  }
+  .map__title {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 130%;
+    text-transform: lowercase;
+  }
+  .map__img {
+    position: relative;
+    top: -52px;
+    left: -32px;
+    width: 361px;
+    margin: 0 auto;
+    height: 254px;
+  }
+}
